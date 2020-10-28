@@ -1,5 +1,5 @@
 # docker nginx php74
-isinya nginx php7.4 drive sqlsrv microsoft sql server
+isinya nginx php7.4 driver sqlsrv microsoft sql server
 ## catatan pribadi... abaikan ya
 ````
 docker build --tag nimdasx/sf-nginx-php74 .   
