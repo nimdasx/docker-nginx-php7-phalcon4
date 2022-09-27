@@ -49,6 +49,7 @@ WORKDIR /usr/local/src
 RUN git clone "git://github.com/phalcon/cphalcon.git"
 WORKDIR /usr/local/src/cphalcon
 #RUN git checkout 3241d96e4bb01dc7746b74c9ce586250b8887c46
+RUN git checkout 4.1.x
 WORKDIR /usr/local/src/cphalcon/build
 RUN ./install
 WORKDIR /
