@@ -4,9 +4,9 @@ LABEL maintainer="nimdasx@gmail.com"
 LABEL description="nginx php74"
 
 #arm
-RUN wget -O "/usr/local/bin/go-replace" "https://github.com/webdevops/goreplace/releases/download/1.1.2/gr-arm64-linux" \
-    && chmod +x "/usr/local/bin/go-replace" \
-    && "/usr/local/bin/go-replace" --version
+#RUN wget -O "/usr/local/bin/go-replace" "https://github.com/webdevops/goreplace/releases/download/1.1.2/gr-arm64-linux" \
+#    && chmod +x "/usr/local/bin/go-replace" \
+#    && "/usr/local/bin/go-replace" --version
 
 #set timezone
 RUN ln -sf /usr/share/zoneinfo/Asia/Jakarta /etc/localtime \
