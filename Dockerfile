@@ -1,7 +1,7 @@
 FROM webdevops/php-nginx:7.4-alpine
 
 LABEL maintainer="nimdasx@gmail.com"
-LABEL description="nginx php74"
+LABEL description="nginx php-7.4 phalcon-4.1"
 
 #arm
 #RUN wget -O "/usr/local/bin/go-replace" "https://github.com/webdevops/goreplace/releases/download/1.1.2/gr-arm64-linux" \
