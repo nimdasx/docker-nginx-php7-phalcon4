@@ -22,8 +22,8 @@ RUN curl -O https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac
     && apk add --allow-untrusted mssql-tools_17.6.1.1-1_amd64.apk \
     && apk update \
     && apk add autoconf make g++ unixodbc-dev \
-    && pecl install sqlsrv \
-    && pecl install pdo_sqlsrv \
+    && pecl install sqlsrv-5.9.0 \
+    && pecl install pdo_sqlsrv-5.9.0 \
     && echo extension=pdo_sqlsrv.so >> `php --ini | grep "Scan for additional .ini files" | sed -e "s|.*:\s*||"`/10_pdo_sqlsrv.ini \
     && echo extension=sqlsrv.so >> `php --ini | grep "Scan for additional .ini files" | sed -e "s|.*:\s*||"`/00_sqlsrv.ini
 
@@ -56,3 +56,6 @@ RUN ./install
 WORKDIR /
 RUN rm -rf /usr/local/src/cphalcon
 RUN docker-php-ext-enable phalcon
+
+#config
+COPY vhost.conf /opt/docker/etc/nginx/vhost.conf
