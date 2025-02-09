@@ -12,4 +12,6 @@ docker push ghcr.io/nimdasx/nginx-php7-phalcon4
 ````
 docker build --tag nimdasx/nginx-php7-phalcon4 .
 docker push nimdasx/nginx-php7-phalcon4
+
+docker buildx build --platform linux/amd64 --tag nimdasx/nginx-php7-phalcon4 --push .
 ````
