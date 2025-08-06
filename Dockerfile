@@ -18,3 +18,6 @@ RUN install-php-extensions sqlsrv pdo_sqlsrv psr phalcon-4.1.2
 #RUN wget -O "/usr/local/bin/go-replace" "https://github.com/webdevops/goreplace/releases/download/1.1.2/gr-arm64-linux" \
 #    && chmod +x "/usr/local/bin/go-replace" \
 #    && "/usr/local/bin/go-replace" --version
+
+RUN apk update && apk add --no-cache \
+    libreoffice
